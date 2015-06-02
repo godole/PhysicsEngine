@@ -44,7 +44,7 @@ void CGround::SetPos(D3DXVECTOR2 a_Pos)
 
 void CGround::SetRigidBodyVertices()
 {
-	m_pRigidBody->SetVertexWithIndex(m_Pos + D3DXVECTOR2(-m_Size.x / 2, -m_Size.y	 ), 0);
+	m_pRigidBody->SetVertexWithIndex(m_Pos + D3DXVECTOR2(-m_Size.x / 2, -m_Size.y / 2), 0);
 	m_pRigidBody->SetVertexWithIndex(m_Pos + D3DXVECTOR2(-m_Size.x / 2, +m_Size.y / 2), 1);
 	m_pRigidBody->SetVertexWithIndex(m_Pos + D3DXVECTOR2(+m_Size.x / 2, +m_Size.y / 2), 2);
 	m_pRigidBody->SetVertexWithIndex(m_Pos + D3DXVECTOR2(+m_Size.x / 2, -m_Size.y / 2), 3);

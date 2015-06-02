@@ -1,6 +1,7 @@
 #include "ConstantValue.h"
 #include "PhysicsManager.h"
 #include "RigidBody.h"
+#include "CollisionManager.h"
 
 void PolygonProjectionToVector(vector<D3DXVECTOR2> vertices, D3DXVECTOR2 axis, float* min, float* max)
 {
@@ -48,7 +49,7 @@ void PhysicsManager::InsertBody(RigidBody* a_pBody)
 
 void PhysicsManager::Tick(float dt)
 {
-	for (int i = 0; i < m_vRigidBodyArray.size(); i++)
+	for (int i = 0; i < m_vRigidBodyArray.size() - 1; i++)
 	{
 		auto Body1 = m_vRigidBodyArray[i];
 
@@ -84,11 +85,11 @@ void PhysicsManager::Tick(float dt)
 
 		ds = Body1->m_vVelocity;
 
-		for (int j = 0; j < m_vRigidBodyArray.size(); j++)
+		for (int j = i; j < m_vRigidBodyArray.size(); j++)
 		{
 			auto Body2 = m_vRigidBodyArray[j];
 
-			if(Body1 == Body2)
+			if(Body1 == Body2 || !CollisionManager::GetInstance()->Circle_Check(Body1->m_vPosition.x, Body1->m_vPosition.y, Body2->m_vPosition.x, Body2->m_vPosition.y, 700))
 				continue;
 
 			CollisionCheckResult result;
@@ -142,16 +143,6 @@ CollisionCheckResult PhysicsManager::PolygonCollisionCheck(RigidBody* sprite1, R
 	vector<D3DXVECTOR2> verticeB = sprite2->m_arrVertex;
 	vector<D3DXVECTOR2> edgesA;
 	vector<D3DXVECTOR2> edgesB;
-
-	/*verticeA.push_back(sprite1->getPosition() + D3DXVECTOR2(-sprite1->getWidth() / 2, -sprite1->getHeight() / 2));
-	  verticeA.push_back(sprite1->getPosition() + D3DXVECTOR2(-sprite1->getWidth() / 2, +sprite1->getHeight() / 2));
-	  verticeA.push_back(sprite1->getPosition() + D3DXVECTOR2(+sprite1->getWidth() / 2, +sprite1->getHeight() / 2));
-	  verticeA.push_back(sprite1->getPosition() + D3DXVECTOR2(+sprite1->getWidth() / 2, -sprite1->getHeight() / 2));
-	  
-	  verticeB.push_back(sprite2->getPosition() + D3DXVECTOR2(-sprite2->getWidth() / 2, -sprite2->getHeight() / 2));
-	  verticeB.push_back(sprite2->getPosition() + D3DXVECTOR2(-sprite2->getWidth() / 2, +sprite2->getHeight() / 2));
-	  verticeB.push_back(sprite2->getPosition() + D3DXVECTOR2(+sprite2->getWidth() / 2, +sprite2->getHeight() / 2));
-	  verticeB.push_back(sprite2->getPosition() + D3DXVECTOR2(+sprite2->getWidth() / 2, -sprite2->getHeight() / 2));*/
 
 	for (int i = 0; i < vertexCountA; i++)
 	{
@@ -237,6 +228,7 @@ void PhysicsManager::ApplyImpulse(RigidBody* Body1, RigidBody* Body2, D3DXVECTOR
 
 	if (Body1->m_fMass != 0)
 		Body1->m_vVelocity += (j * vCollisionNormal) * Body1->m_fMassInv;
+
 	if (Body2->m_fMass != 0)
 		Body2->m_vVelocity -= (j * vCollisionNormal) * Body2->m_fMassInv;
 }

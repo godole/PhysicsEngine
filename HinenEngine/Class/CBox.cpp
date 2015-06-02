@@ -16,9 +16,9 @@ void CBox::Init(string path)
 	Load_Texture(path);
 
 	m_pRigidBody = new RigidBody;
-	m_pRigidBody->setIsGravity(false);
+	//m_pRigidBody->setIsGravity(false);
 
-	m_pRigidBody->setMass(0);
+	m_pRigidBody->setMass(3);
 	m_pRigidBody->setFriction(100);
 
 	m_pRigidBody->setWidth(m_Size.x);

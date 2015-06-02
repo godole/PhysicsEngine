@@ -1,24 +1,24 @@
-﻿빌드 시작: 2015-06-01 오후 9:07:40
-     1>2 노드의 "J:\플밍\HinenEngine\HinenEngine.vcxproj" 프로젝트(build 대상)입니다.
-       프로젝트 파일에 이 버전의 MSBuild에서 지원되지 않는 ToolsVersion="12.0"이(가) 들어 있습니다. 프로젝트에 ToolsVersion="4.0"이 들어 있는 것으로 간주합니다.
-     1>InitializeBuildStatus:
-         "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\HinenEngine.unsuccessfulbuild"을(를) 만들고 있습니다.
-       ClCompile:
-         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\Class /I.\Core /I.\Main /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Class\S_Game.cpp
-         S_Game.cpp
-     1>Class\S_Game.cpp(29): warning C4244: '인수' : 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>Class\S_Game.cpp(29): warning C4244: '인수' : 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>Class\S_Game.cpp(30): warning C4244: '인수' : 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>Class\S_Game.cpp(30): warning C4244: '인수' : 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>Class\S_Game.cpp(31): warning C4244: '인수' : 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>Class\S_Game.cpp(31): warning C4244: '인수' : 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>Class\S_Game.cpp(32): warning C4244: '인수' : 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>Class\S_Game.cpp(32): warning C4244: '인수' : 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>Class\S_Game.cpp(33): warning C4244: '인수' : 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>Class\S_Game.cpp(33): warning C4244: '인수' : 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>Class\S_Game.cpp(82): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+﻿Build started 2015-06-02 오후 3:14:50.
+     1>Project "C:\Users\smart\Documents\GitHub\PhysicsEngine\HinenEngine\HinenEngine.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\Class /I.\Core /I.\Main /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Class\PhysicsManager.cpp Core\Object_Manger.cpp
+         PhysicsManager.cpp
+     1>Class\PhysicsManager.cpp(52): warning C4018: '<' : signed/unsigned mismatch
+     1>Class\PhysicsManager.cpp(82): warning C4305: '+=' : truncation from 'double' to 'FLOAT'
+     1>Class\PhysicsManager.cpp(88): warning C4018: '<' : signed/unsigned mismatch
+     1>Class\PhysicsManager.cpp(147): warning C4018: '<' : signed/unsigned mismatch
+     1>Class\PhysicsManager.cpp(152): warning C4018: '<' : signed/unsigned mismatch
+     1>Class\PhysicsManager.cpp(157): warning C4018: '<' : signed/unsigned mismatch
+     1>Class\PhysicsManager.cpp(160): warning C4018: '<' : signed/unsigned mismatch
+         Generating Code...
+         Compiling...
+         Object_Manger.cpp
+     1>Core\Object_Manger.cpp(35): warning C4018: '<' : signed/unsigned mismatch
+     1>Core\Object_Manger.cpp(39): warning C4018: '<' : signed/unsigned mismatch
+     1>Core\Object_Manger.cpp(54): warning C4018: '<' : signed/unsigned mismatch
+         Generating Code...
        Link:
-         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"J:\플밍\HinenEngine\Debug\HinenEngine.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\HinenEngine.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"J:\플밍\HinenEngine\Debug\HinenEngine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"J:\플밍\HinenEngine\Debug\HinenEngine.lib" /MACHINE:X86 Debug\CBox.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\smart\Documents\GitHub\PhysicsEngine\HinenEngine\Debug\HinenEngine.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\HinenEngine.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\smart\Documents\GitHub\PhysicsEngine\HinenEngine\Debug\HinenEngine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\smart\Documents\GitHub\PhysicsEngine\HinenEngine\Debug\HinenEngine.lib" /MACHINE:X86 Debug\CBox.obj
          Debug\Ground.obj
          Debug\O_Char.obj
          Debug\PhysicsManager.obj
@@ -36,14 +36,11 @@
          Debug\TextureManager.obj
          Debug\Main.obj
          Debug\stdafx.obj
-         HinenEngine.vcxproj -> J:\플밍\HinenEngine\Debug\HinenEngine.exe
+         HinenEngine.vcxproj -> C:\Users\smart\Documents\GitHub\PhysicsEngine\HinenEngine\Debug\HinenEngine.exe
        Manifest:
-         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"J:\플밍\HinenEngine\Debug\HinenEngine.exe.manifest" /manifest Debug\HinenEngine.exe.intermediate.manifest
-       FinalizeBuildStatus:
-         "Debug\HinenEngine.unsuccessfulbuild" 파일을 삭제하고 있습니다.
-         "Debug\HinenEngine.lastbuildstate"에 연결(touching)하고 있습니다.
-     1>"J:\플밍\HinenEngine\HinenEngine.vcxproj" 프로젝트를 빌드했습니다(build 대상).
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\mt.exe /nologo /verbose /out:"C:\Users\smart\Documents\GitHub\PhysicsEngine\HinenEngine\Debug\HinenEngine.exe.manifest" /manifest Debug\HinenEngine.exe.intermediate.manifest
+     1>Done Building Project "C:\Users\smart\Documents\GitHub\PhysicsEngine\HinenEngine\HinenEngine.vcxproj" (Build target(s)).
 
-빌드했습니다.
+Build succeeded.
 
-경과 시간: 00:00:03.45
+Time Elapsed 00:00:02.76

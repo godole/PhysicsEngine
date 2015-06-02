@@ -26,11 +26,10 @@ void S_Game::Init()
 
 	//obj.setCameraPosPtr(&(m_pPlayer->GetPos()));
 
-	CreateBox(D3DXVECTOR2(rand() % 800, rand() % 600));
-	CreateBox(D3DXVECTOR2(rand() % 800, rand() % 600));
-	CreateBox(D3DXVECTOR2(rand() % 800, rand() % 600));
-	CreateBox(D3DXVECTOR2(rand() % 800, rand() % 600));
-	CreateBox(D3DXVECTOR2(rand() % 800, rand() % 600));
+	/*for (int i = 0; i < 40; i++)
+	{
+		CreateBox(D3DXVECTOR2(rand() % 800, rand() % 600));
+	}*/
 
 	CreateGround(D3DXVECTOR2(100, 800));
 	CreateGround(D3DXVECTOR2(400, 600));
@@ -89,7 +88,7 @@ CBox* S_Game::CreateBox(D3DXVECTOR2 a_Pos)
 {
 	CBox* temp = new CBox;
 	temp->Init("Resource/Ä³¸¯ÅÍ.png");
-	temp->SetSize(D3DXVECTOR2(200, 200));
+	temp->SetSize(D3DXVECTOR2(10, 10));
 	temp->SetPos(a_Pos);
 
 	obj.Add_Object(temp);
